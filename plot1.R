@@ -1,4 +1,5 @@
-## Construct plot 1 of programming assignment 1
+## Construct plot 1 of programming assignment 1 for Coursera Exploratory
+## Data Analysis course
 
 # read data into R
 
