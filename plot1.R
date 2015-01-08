@@ -15,6 +15,9 @@ data <- read.table("household_power_consumption.txt",
 # take only subset of date where date = 1/2/2007 or 2/2/2007
 data <- subset(data, Date=="1/2/2007" | Date=="2/2/2007")
 
+# convert applicable columns to numeric
+data[3:9] <- sapply(data[3:9],as.numeric)
+
 # open png file for histogram
 png("plot1.png", 
     width=480, 
@@ -23,7 +26,7 @@ png("plot1.png",
     bg="transparent")
 
 # create histogram of Global_active_power in device
-hist(data2$Global_active_power, 
+hist(data$Global_active_power, 
      col="red", 
      main="Global Active Power", 
      xlab="Global Active Power (kilowatts)")
